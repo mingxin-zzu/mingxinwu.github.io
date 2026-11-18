@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>武明信 Mingxin Wu · 郑州大学</title>
+<meta name="description" content="武明信，北京大学工学博士，郑州大学力学与安全工程学院副研究员、硕士生导师、未来机器人系副主任。仿生与软体机器人、水下机器人、多模态融合感知与自主控制。">
+<script>if(window.innerWidth<768&&!location.search.includes('desktop=1')&&!location.pathname.endsWith('/m.html'))location.href='m.html';</script>
+<style>
+:root{
+  --paper:#f0f7fa; --surface:#ffffff; --ink:#0a1e33; --ink-2:#2a5068; --muted:#6a8a9e;
+  --line:#c8dde8; --line-2:#e0ecf2; --accent:#0077b6; --accent-soft:#e0f4ff;
+  --primary:#003d6b; --primary-soft:#e0eef5; --ok:#2a8a5a; --warn:#c47a20;
+  --shadow:0 1px 2px rgba(10,30,51,.04), 0 8px 24px -12px rgba(10,30,51,.12);
+  --serif:"Songti SC","Noto Serif SC","Source Han Serif SC",Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",Roboto,sans-serif;
+}
+html[data-theme="dark"]{
+  --paper:#0a1520; --surface:#111e2b; --ink:#e8f0f5; --ink-2:#a0b8c8; --muted:#7a94a8;
+  --line:#1a2d3d; --line-2:#162536; --accent:#4db8e8; --accent-soft:#0d2535;
+  --primary:#7ab8d8; --primary-soft:#0d1f2d; --ok:#5fc88a; --warn:#e0a040;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:78px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 28px;height:62px;display:flex;align-items:center;gap:24px}
+.nav-brand{font-family:var(--serif);font-size:17px;letter-spacing:.06em;font-weight:700;white-space:nowrap}
+.nav-brand span{color:var(--muted);font-family:var(--sans);font-size:11px;letter-spacing:.16em;margin-left:8px;text-transform:uppercase}
+.nav-links{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{font-size:13.5px;color:var(--ink-2);padding:6px 11px;border-radius:6px;white-space:nowrap;transition:.18s}
+.nav-links a:hover{background:var(--line-2);color:var(--ink)}
+.nav-links a.on{color:var(--accent);background:var(--accent-soft);font-weight:600}
+.nav-tools{display:flex;gap:6px;margin-left:8px}
+.icon-btn{width:32px;height:32px;border:1px solid var(--line);background:var(--surface);border-radius:8px;cursor:pointer;color:var(--ink-2);display:grid;place-items:center;font-size:14px;transition:.18s}
+.icon-btn:hover{border-color:var(--accent);color:var(--accent)}
+
+/* hero */
+.hero{padding:118px 0 0;position:relative}
+.hero::before{content:"";position:absolute;top:0;left:0;right:0;height:520px;background:linear-gradient(180deg,#d6effa 0%,#e0f4ff 25%,#eef7fb 55%,var(--paper) 100%);z-index:-1;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1fr 200px;gap:56px;align-items:start}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:18px}
+h1{font-family:var(--serif);font-size:52px;line-height:1.1;margin:0 0 6px;letter-spacing:.04em;font-weight:700}
+.latin{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--muted);letter-spacing:.05em;margin-left:14px;font-weight:400}
+.roles{margin:16px 0 22px;font-size:15px;color:var(--ink-2)}
+.roles b{font-weight:600;color:var(--ink)}
+.roles i{color:var(--line);margin:0 9px;font-style:normal}
+.lead{font-family:var(--serif);font-size:19px;line-height:1.85;color:var(--ink);border-left:2px solid var(--accent);padding-left:18px;margin:0 0 26px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.chip{font-size:12.5px;padding:5px 12px;border:1px solid var(--line);border-radius:999px;color:var(--ink-2);background:var(--surface)}
+.contact-row{display:flex;flex-wrap:wrap;gap:20px;font-size:13.5px}
+.contact-row a{color:var(--ink-2);border-bottom:1px solid var(--line);padding-bottom:1px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+.contact-row a:hover{color:var(--accent);border-color:var(--accent)}
+.photo{width:200px;height:250px;border-radius:4px;background:linear-gradient(160deg,var(--primary-soft),var(--accent-soft));border:1px solid var(--line);display:grid;place-items:center;position:relative;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
+.photo .mono{font-family:var(--serif);font-size:76px;color:var(--primary);opacity:.55}
+.photo-cap{font-size:11px;color:var(--muted);text-align:center;margin-top:10px;letter-spacing:.05em}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:52px 0 0}
+.stat{background:var(--surface);padding:20px 18px;text-align:left}
+.stat b{display:block;font-family:var(--serif);font-size:30px;line-height:1.1;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.stat b i{font-style:normal;font-size:14px;color:var(--muted);margin-left:3px;font-family:var(--sans)}
+.stat span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+
+/* sections */
+section{padding:74px 0 0}
+.sec-head{display:flex;align-items:baseline;gap:16px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:34px}
+.sec-no{font-family:var(--serif);font-size:13px;color:var(--accent);letter-spacing:.1em}
+.sec-head h2{font-family:var(--serif);font-size:26px;margin:0;letter-spacing:.04em;font-weight:700}
+.sec-en{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-left:auto}
+/* 实验室 band */
+.lab-band{display:grid;grid-template-columns:300px 1fr;gap:34px;align-items:center;margin:44px 0 10px;padding:26px 30px;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
+.lab-logo{background:#fff;border-radius:8px;padding:6px;display:grid;place-items:center}
+.lab-logo img{width:100%;height:auto;display:block;border-radius:4px}
+.lab-tag{display:inline-block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:3px 9px;border-radius:3px;margin-bottom:12px}
+.lab-body h2{font-family:var(--serif);font-size:26px;letter-spacing:.02em;margin:0 0 7px;line-height:1.35}
+.lab-en{font-size:12.5px;color:var(--muted);margin-bottom:13px}
+.lab-abbr{display:inline-block;margin-left:10px;padding:1px 7px;border:1px solid var(--line);border-radius:3px;color:var(--primary);font-weight:600;letter-spacing:.06em}
+.lab-body p{font-size:14px;line-height:1.85;color:var(--ink-2);margin:0;max-width:64ch}
+@media (max-width:860px){.lab-band{grid-template-columns:1fr;gap:20px;padding:22px}.lab-logo{max-width:300px}}
+
+.prose p{margin:0 0 16px;color:var(--ink-2);font-size:15.5px}
+.prose p:last-child{margin-bottom:0}
+.prose b{color:var(--ink);font-weight:600}
+
+/* research cards */
+.grid-4{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:30px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px 24px 22px;transition:.2s}
+.card:hover{border-color:var(--accent);box-shadow:var(--shadow);transform:translateY(-1px)}
+.card h3{font-size:15.5px;margin:0 0 8px;font-weight:600;letter-spacing:.02em}
+.card p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.7}
+.card .idx{font-family:var(--serif);font-size:12px;color:var(--accent);display:block;margin-bottom:10px;letter-spacing:.1em}
+
+/* timeline */
+.tl{position:relative;padding-left:26px}
+.tl:before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:var(--line)}
+.tl-item{position:relative;padding-bottom:26px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item:before{content:"";position:absolute;left:-25px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--paper);border:2px solid var(--accent)}
+.tl-item.dim:before{border-color:var(--muted)}
+.tl-when{font-size:12.5px;color:var(--muted);letter-spacing:.05em;font-variant-numeric:tabular-nums}
+.tl-what{font-size:15.5px;font-weight:600;margin:2px 0 2px}
+.tl-where{font-size:13.5px;color:var(--ink-2)}
+
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;font-weight:600;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:0 12px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:13px 12px;border-bottom:1px solid var(--line-2);vertical-align:top;color:var(--ink-2)}
+tr:last-child td{border-bottom:none}
+tbody tr{transition:background .15s}
+tbody tr:hover{background:var(--surface)}
+.c-name{min-width:280px}
+.pname{display:block;color:var(--ink);font-weight:500;line-height:1.5}
+.pno{display:inline-block;margin-top:4px;font-size:11.5px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.02em}
+.c-src{font-size:12.5px;max-width:230px}
+.c-period{font-size:12.5px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.c-money{text-align:right;white-space:nowrap}
+.money{font-family:var(--serif);font-size:16px;color:var(--ink);font-variant-numeric:tabular-nums}
+.money i{font-style:normal;font-size:11px;color:var(--muted);margin-left:2px;font-family:var(--sans)}
+.c-role{font-size:12.5px;white-space:nowrap;color:var(--accent)}
+.subhead{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:34px 0 12px;display:flex;align-items:center;gap:12px}
+.subhead:after{content:"";flex:1;height:1px;background:var(--line-2)}
+
+/* papers */
+.papers{list-style:none;margin:0;padding:0}
+.paper{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line-2)}
+.paper:last-child{border-bottom:none}
+.paper-year{font-family:var(--serif);font-size:15px;color:var(--muted);padding-top:2px;font-variant-numeric:tabular-nums}
+.paper h3{font-size:15px;font-weight:500;margin:0 0 7px;line-height:1.55;color:var(--ink)}
+.paper-meta{font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin-bottom:9px}
+.journal{font-style:italic;font-family:var(--serif);font-size:13.5px;color:var(--ink-2)}
+.meta-k{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);opacity:.75}
+.dot{opacity:.4}
+.doi{margin-left:auto;font-size:11.5px;letter-spacing:.08em;color:var(--accent);border-bottom:1px solid transparent}
+.doi:hover{border-color:var(--accent)}
+.vol{font-variant-numeric:tabular-nums}
+.badges{display:flex;flex-wrap:wrap;gap:6px}
+.badge{font-size:11px;padding:2px 8px;border-radius:4px;letter-spacing:.04em;border:1px solid transparent}
+.b-first{background:var(--accent);color:#fff}
+.b-co{background:var(--accent-soft);color:var(--accent);border-color:var(--accent-soft)}
+.b-corr{background:var(--primary);color:#fff}
+html[data-theme="dark"] .b-first,html[data-theme="dark"] .b-corr{color:#11161c}
+.b-zone{background:var(--primary-soft);color:var(--primary);border-color:var(--primary-soft)}
+.b-plain{background:transparent;color:var(--muted);border-color:var(--line)}
+.b-cover{background:transparent;color:var(--warn);border-color:var(--warn)}
+.b-esi{background:transparent;color:var(--ok);border-color:var(--ok)}
+.b-accept{background:transparent;color:var(--accent);border-color:var(--accent);border-style:dashed}
+
+/* patents */
+.pat-stats{display:flex;gap:26px;flex-wrap:wrap;margin-bottom:24px;font-size:13px;color:var(--muted)}
+.pat-stats b{font-family:var(--serif);font-size:20px;color:var(--ink);margin-right:5px;font-variant-numeric:tabular-nums}
+.c-title{min-width:250px;color:var(--ink);line-height:1.5}
+.c-num,.c-app{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;white-space:nowrap}
+.c-date{font-size:12.5px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.c-org{font-size:12.5px;white-space:nowrap}
+.c-rank{text-align:center;font-variant-numeric:tabular-nums}
+.st{font-size:11.5px;padding:2px 8px;border-radius:4px;white-space:nowrap}
+.st-ok{background:rgba(47,107,79,.12);color:var(--ok)}
+.st-wait{background:var(--primary-soft);color:var(--primary)}
+.st-no{background:rgba(0,119,182,.1);color:var(--accent)}
+tr.first .c-title:before{content:"★ ";color:var(--accent);font-size:10px}
+
+/* teaching */
+.teach-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:38px}
+.c-term{font-size:12px;white-space:nowrap;color:var(--muted);font-variant-numeric:tabular-nums}
+.c-cname b{display:block;font-weight:500;color:var(--ink);font-size:13.5px}
+.cno{display:block;font-size:11.5px;color:var(--muted);margin-top:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.c-who,.c-role2{font-size:12px;line-height:1.6}
+.c-role2{color:var(--accent)}
+.c-hrs{text-align:right;font-family:var(--serif);font-size:15px;color:var(--ink)}
+.stus{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.stu{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.stu-name{font-weight:600;font-size:14px}
+.stu-meta{font-size:11.5px;color:var(--muted);margin-top:2px}
+.stu-id{font-size:10.5px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;margin-top:4px;opacity:.8}
+.stu-work{font-size:11px;color:var(--accent);margin-top:4px;line-height:1.5}
+.mini-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:30px 0 0}
+.ms{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px}
+.ms b{display:block;font-family:var(--serif);font-size:26px;line-height:1.1;font-variant-numeric:tabular-nums}
+.ms span{display:block;font-size:12px;color:var(--muted);margin-top:4px}
+.cp-list{list-style:none;margin:16px 0 0;padding:0}
+.cp-list li{display:grid;grid-template-columns:46px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--line-2);font-size:13px}
+.cp-list li:last-child{border:none}
+.cp-year{color:var(--muted);font-size:11.5px;font-variant-numeric:tabular-nums}
+.cp-name{color:var(--ink);line-height:1.5}
+.cp-stu{grid-column:2;font-size:11px;color:var(--muted);margin-top:-2px}
+.c-dcno{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;color:var(--muted);white-space:nowrap}
+/* 竞赛全量表 */
+.cp-table{font-size:12.5px}
+.cp-table th{font-size:11.5px;letter-spacing:.04em}
+.cp-table td{padding:9px 10px;vertical-align:top}
+.c-cyr{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;color:var(--muted);white-space:nowrap}
+.c-cpname{color:var(--ink);max-width:330px}
+.c-cpstu{font-size:12px;color:var(--ink-2);max-width:230px}
+.c-cpwho{font-size:11.5px;color:var(--muted);white-space:nowrap}
+.lv{display:inline-block;font-size:10.5px;padding:2px 7px;border-radius:3px;white-space:nowrap;letter-spacing:.02em}
+.lv.nat{background:var(--accent-soft);color:#005a8c}
+.lv.prov{background:var(--primary-soft);color:var(--primary)}
+.lv.oth{background:#e8f0f5;color:var(--muted)}
+.gd{display:inline-block;font-size:11px;font-weight:600;white-space:nowrap}
+.gd.g1{color:#c25a18} .gd.g2{color:var(--ink-2)} .gd.g3{color:var(--muted)} .gd.g9{color:var(--muted);font-weight:400}
+.ftnote{font-size:11.5px;color:var(--muted);margin-top:10px;line-height:1.7}
+@media print{.cp-table{font-size:10.5px}.cp-table td{padding:5px 6px}}
+.c-dcname{color:var(--ink);font-size:13px;line-height:1.5}
+.c-leader{font-size:12.5px;white-space:nowrap}
+.c-lvl{font-size:11.5px;white-space:nowrap;color:var(--muted)}
+tr.key .c-lvl{color:var(--accent);font-weight:600}
+
+/* awards */
+.aw-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.aw-list li{display:grid;grid-template-columns:52px 1fr auto;gap:10px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--line-2)}
+.aw-year{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.aw-name{font-size:13.5px;color:var(--ink);line-height:1.5}
+.aw-org{display:none}
+.aw-lvl{font-size:10.5px;color:var(--muted);white-space:nowrap;border:1px solid var(--line);border-radius:3px;padding:1px 6px}
+
+/* service */
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.svc h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 14px;font-weight:600}
+.svc ul{list-style:none;margin:0;padding:0}
+.svc li{padding:9px 0;border-bottom:1px solid var(--line-2);font-size:13.5px;color:var(--ink-2);display:flex;justify-content:space-between;gap:14px}
+.svc li:last-child{border:none}
+.svc li em{font-style:normal;color:var(--muted);font-size:12px;white-space:nowrap}
+
+/* contact */
+.contact-box{margin-top:8px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:38px;display:grid;grid-template-columns:1fr 1fr;gap:30px 50px}
+.cf span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.cf a,.cf div{font-size:14.5px;color:var(--ink);word-break:break-all}
+.cf a:hover{color:var(--accent)}
+
+footer{margin-top:80px;border-top:1px solid var(--line);padding:30px 0 44px;font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.top{position:fixed;right:26px;bottom:26px;width:40px;height:40px;border-radius:50%;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;cursor:pointer;opacity:0;pointer-events:none;transition:.25s;color:var(--ink-2);font-size:15px;z-index:40}
+.top.show{opacity:1;pointer-events:auto}
+.top:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ocean wave divider */
+.ocean-wave{display:block;width:100%;height:90px;margin-top:-1px;position:relative;z-index:1;line-height:0}
+.ocean-wave svg{display:block;width:100%;height:100%}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .photo{width:150px;height:190px}
+  h1{font-size:40px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .grid-4{grid-template-columns:1fr}
+  .teach-grid{grid-template-columns:1fr;gap:28px}
+  .aw-list,.svc{grid-template-columns:1fr}
+  .contact-box{grid-template-columns:1fr;padding:26px}
+  .nav-links{display:none}
+  .wrap{padding:0 20px}
+  table{font-size:12.5px}
+  .hide-sm{display:none}
+}
+@media print{
+  .nav,.top,.icon-btn,.nav-tools{display:none!important}
+  body{background:#fff;font-size:10.5pt}
+  html{scroll-padding-top:0}
+  section{padding:22px 0 0;page-break-inside:auto}
+  .hero{padding:0 0 0}
+  .sec-head{page-break-after:avoid}
+  .paper,.tl-item,tr{page-break-inside:avoid}
+  .card,.stu,.contact-box{box-shadow:none}
+  a{color:inherit}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <a class="nav-brand" href="#top">武明信<span>Mingxin Wu</span></a>
+    <div class="nav-links">
+      <a href="#lab">实验室</a>
+      <a href="#about">研究概况</a>
+      <a href="#experience">教育与经历</a>
+      <a href="#projects">科研项目</a>
+      <a href="#papers">学术论文</a>
+      <a href="#patents">发明专利</a>
+      <a href="#teaching">教学育人</a>
+      <a href="#honors">荣誉奖励</a>
+      <a href="#service">学术服务</a>
+      <a href="#contact">联系</a>
+    </div>
+    <div class="nav-tools">
+      <button class="icon-btn" id="themeBtn" title="切换深浅色" aria-label="切换深浅色">◐</button>
+      <button class="icon-btn" id="printBtn" title="打印 / 存为 PDF" aria-label="打印">⎙</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero wrap" id="top">
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow">Zhengzhou University · School of Mechanics &amp; Safety Engineering</div>
+      <h1>武明信<span class="latin">Mingxin Wu</span></h1>
+      <div class="roles"><b>副研究员</b><i>·</i><b>硕士生导师</b><i>·</i><b>未来机器人系副主任</b><i>·</i>郑州大学 力学与安全工程学院</div>
+      <div class="chips">
+        <span class="chip">仿生与软体机器人</span>
+        <span class="chip">水下机器人</span>
+        <span class="chip">多模态融合感知</span>
+        <span class="chip">结构—驱动—控制一体化</span>
+        <span class="chip">跨介质作业</span>
+      </div>
+      <div class="contact-row">
+        <a href="mailto:mingxinwu@zzu.edu.cn">✉ mingxinwu@zzu.edu.cn</a>
+        <a href="https://scholar.google.com/citations?user=LLUHaXIAAA" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://orcid.org/0000-0001-9066-5118" target="_blank" rel="noopener">ORCID</a>
+        <a href="https://www5.zzu.edu.cn/gclx/info/1045/2612.htm" target="_blank" rel="noopener">学院主页</a>
+      </div>
+    </div>
+    <div>
+      <div class="photo">
+        <img src="photo.jpg" alt="武明信">
+      </div>
+      <div class="photo-cap">Zhengzhou · 2026</div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>20<i>篇</i></b><span>SCI 论文（一作/通讯 11 篇）</span></div>
+    <div class="stat"><b>18<i>项</i></b><span>发明专利（第一发明人 7 项）</span></div>
+    <div class="stat"><b>10<i>项</i></b><span>主持科研项目 / 362 万元</span></div>
+    <div class="stat"><b>11<i>篇</i></b><span>中科院一区论文</span></div>
+    <div class="stat"><b>46<i>项</i></b><span>指导本科生获国家级奖</span></div>
+  </div>
+</header>
+
+<div class="ocean-wave" aria-hidden="true">
+<svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0,40 C240,100 480,20 720,60 C960,100 1200,20 1440,50 L1440,120 L0,120 Z" fill="#e0f4ff" opacity="0.5"/>
+  <path d="M0,60 C360,20 720,100 1080,60 C1260,40 1380,70 1440,60 L1440,120 L0,120 Z" fill="var(--paper)"/>
+</svg>
+</div>
+
+<main class="wrap">
+
+<section id="lab" class="lab-band">
+  <div class="lab-logo"><img src="logo.jpg" alt="BRMI Lab"></div>
+  <div class="lab-body">
+    <span class="lab-tag">创始人 · 实验室主任　Founder &amp; Director</span>
+    <h2>仿生机器人与形态智能实验室</h2>
+    <div class="lab-en">Bioinspired Robotics and Morphological Intelligence Lab<span class="lab-abbr">BRMI Lab</span></div>
+    <p>聚焦仿生机器人与形态智能前沿研究，面向复杂、非结构化和跨环境作业需求，探索生物结构、形态与行为机制在机器人设计中的启发作用。</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="sec-head"><span class="sec-no">01</span><h2>研究概况</h2><span class="sec-en">Research</span></div>
+  <div class="prose">
+    <p>北京大学工学博士（一般力学与力学基础，导师：谢广明教授），博士期间从事仿生水下机器人研究，获北京大学校长奖学金、国家奖学金、工学院“学术十杰”及国际仿生创新大赛一等奖。2024 年 7 月入职郑州大学力学与安全工程学院，现任副研究员、硕士生导师、未来机器人系副主任。</p>
+    <p>面向“海洋强国”与智能制造需求，围绕<b>水下非结构化环境中的感知—决策—作业闭环</b>，形成“仿生机理—软体结构—驱动控制—水下验证”的完整研究链条。代表性成果包括：仿发光吸盘章鱼的水下自适应抓取与感知软体手（<i>Advanced Science</i> 封面论文、ESI 高被引）、具备爬游双模态的水下仿生抓取手（<i>Research</i>，2024 年度最佳论文奖）、快速变刚度的水下抓取与向上运输机器人（<i>Cyborg and Bionic Systems</i>）、织物堆叠可编程多功能软体机器人（<i>IEEE Transactions on Robotics</i>）等。发表 SCI 论文 20 篇，其中一作/通讯 11 篇、中科院一区 11 篇，被引 1038 次；申请及授权发明专利 18 项。</p>
+  </div>
+  <div class="grid-4">
+    <div class="card"><span class="idx">01 / BIONIC</span><h3>仿生与软体机器人</h3><p>以章鱼、水母、鱼类的运动与感知机理为原型，研究软体结构设计、变刚度驱动与多模态运动，解决非结构化环境下的自适应抓取问题。</p></div>
+    <div class="card"><span class="idx">02 / UNDERWATER</span><h3>水下机器人</h3><p>面向近浅海与浑浊水域作业，研究跨介质（水—陆—空）机器人构型、推进与密封可靠性，推进水下软体作业从“能抓”到“能用”。</p></div>
+    <div class="card"><span class="idx">03 / SENSING</span><h3>多模态融合感知与自主控制</h3><p>视触觉融合、流体感知与肌电信号解码，构建“感知—建模—控制”闭环，实现水下精细作业的自主决策。</p></div>
+    <div class="card"><span class="idx">04 / INTEGRATION</span><h3>结构—驱动—控制一体化设计</h3><p>基于 3D 打印与微纳成型的结构—功能一体化制造，把驱动、传感与承载做进同一结构，缩短从机理到样机的链路。</p></div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="sec-head"><span class="sec-no">02</span><h2>教育与工作经历</h2><span class="sec-en">Education &amp; Appointments</span></div>
+  <div class="tl">
+    <div class="tl-item"><div class="tl-when">2026.10 — 至今</div><div class="tl-what">未来机器人系副主任</div><div class="tl-where">郑州大学 力学与安全工程学院</div></div>
+    <div class="tl-item"><div class="tl-when">2025.12 — 至今</div><div class="tl-what">副研究员</div><div class="tl-where">郑州大学 力学与安全工程学院</div></div>
+    <div class="tl-item"><div class="tl-when">2024.07 — 2025.12</div><div class="tl-what">助理研究员</div><div class="tl-where">郑州大学 力学与安全工程学院</div></div>
+    <div class="tl-item dim"><div class="tl-when">2020.09 — 2024.07</div><div class="tl-what">博士 · 一般力学与力学基础</div><div class="tl-where">北京大学 工学院 先进制造与机器人系　导师：谢广明 教授</div></div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="sec-head"><span class="sec-no">03</span><h2>科研项目</h2><span class="sec-en">Projects</span></div>
+  <div class="subhead">主持 10 项 · 本人经费合计 362 万元（项目总额 458 万元）</div>
+  <table>
+    <thead><tr><th>项目名称 / 编号</th><th>来源与类别</th><th>执行期</th><th style="text-align:right">本人经费</th><th>本人角色</th></tr></thead>
+    <tbody>
+        <tr>
+          <td class="c-name"><span class="pname">深水取样软体机械手设计及关键技术研究及应用推广</span><span class="pno">ZDYF2026GXJS035
+（总项目号）</span></td>
+          <td class="c-src">省部级·海南省重点研发专项</td>
+          <td class="c-period">2026.01—2027.12</td>
+          <td class="c-money"><span class="money">160<i>万</i></span></td>
+          <td class="c-role">主持</td>
+        </tr>
+        <tr>
+          <td class="c-name"><span class="pname">仿生章鱼与仿生水母机器人关键技术研发</span><span class="pno">20260872A</span></td>
+          <td class="c-src">横向·企业委托（博雅工道海洋科技集团股份有限公司）</td>
+          <td class="c-period">2026.09—2027.09</td>
+          <td class="c-money"><span class="money">100<i>万</i></span></td>
+          <td class="c-role">主持</td>
+        </tr>
+        <tr>
+          <td class="c-name"><span class="pname">基于仿生多模态抓取手的水下刚度调节机理及视触觉融合关键技术研究</span><span class="pno">GZB20250072</span></td>
+          <td class="c-src">国家级·国家资助博士后研究人员计划（B 档）</td>
+          <td class="c-period">2026.01—2027.12</td>
+          <td class="c-money"><span class="money">36<i>万</i></span></td>
+          <td class="c-role">主持</td>
+        </tr>
+        <tr>
+          <td class="c-name"><span class="pname">郑州大学“求是计划”启动经费</span></td>
+          <td class="c-src">校级</td>
+          <td class="c-period">2024.09—2027.12</td>
+          <td class="c-money"><span class="money">20<i>万</i></span></td>
+          <td class="c-role">主持</td>
+        </tr>
+        <tr>
+          <td class="c-name"><span class="pname">具备多模态栖息能力的跨介质无人机设计与关键技术研究</span><span class="pno">252102221024</span></td>
+          <td class="c-src">省部级·河南省重点研发与推广专项（科技攻关）</td>
+          <td class="c-period">2025.01—2026.12</td>
+          <td class="c-money"><span class="money">10<i>万</i></span></td>
+          <td class="c-role">主持</td>
+        </tr>
+        <tr>
+          <td class="c-name"><span class="pname">刚柔耦合的栖息与抓取一体式可变构无人机开发</span><span class="pno">20250271A</span></td>
+          <td class="c-src">横向·企业委托（郑州彬隆电子科技有限公司·技术开发）</td>
+          <td class="c-period">2025.05.09—2026.05.29</td>
+          <td class="c-money"><span class="money">10<i>万</i></span></td>
+          <td class="c-role">主持</td>
+        </tr>
+        <tr>
+          <td class="c-name"><span class="pname">仿生抓取手水下刚度调节机理与视触融合控制关键技术研究（中国博士后科学基金第 78 批面上）</span><span class="pno">2025M781342</span></td>
+          <td class="c-src">省部级·中国博士后科学基金面上</td>
+          <td class="c-period">2026.01—2028.12</td>
+          <td class="c-money"><span class="money">8<i>万</i></span></td>
+          <td class="c-role">主持</td>
+        </tr>
+        <tr>
+          <td class="c-name"><span class="pname">水下机械手刚度调节机理与视触觉融合感知关键技术研究（河南省博士后配套资助）</span><span class="pno">22120020</span></td>
+          <td class="c-src">省级·河南省博士后配套</td>
+          <td class="c-period">2026.01—2027.12</td>
+          <td class="c-money"><span class="money">8<i>万</i></span></td>
+          <td class="c-role">主持</td>
+        </tr>
+        <tr>
+          <td class="c-name"><span class="pname">AI 辅助汽车夹具设计软件开发</span><span class="pno">20260155A</span></td>
+          <td class="c-src">横向·企业委托（合肥中控智科机器人有限公司·技术开发合同）</td>
+          <td class="c-period">2026.03.09—2027.03.10</td>
+          <td class="c-money"><span class="money">5<i>万</i></span></td>
+          <td class="c-role">主持（子课题）</td>
+        </tr>
+        <tr>
+          <td class="c-name"><span class="pname">具备多模态栖息能力的跨介质无人机设计及关键技术研究（校内军工培育）</span></td>
+          <td class="c-src">校级·2026 年度校内军工培育项目</td>
+          <td class="c-period">2026.11—（待定）</td>
+          <td class="c-money"><span class="money">5<i>万</i></span></td>
+          <td class="c-role">主持</td>
+        </tr>
+    </tbody>
+  </table>
+  <div class="subhead">参与 5 项</div>
+  <table>
+    <thead><tr><th>项目名称 / 编号</th><th>来源与类别</th><th>执行期</th><th></th><th>本人角色</th></tr></thead>
+    <tbody>
+        <tr>
+          <td class="c-name"><span class="pname">国家自然科学基金联合基金-重点项目</span><span class="pno">U23B2037</span></td>
+          <td class="c-src">国家级</td>
+          <td class="c-period">2024.01—2027.12</td>
+          <td class="c-money"></td>
+          <td class="c-role">参与</td>
+        </tr>
+        <tr>
+          <td class="c-name"><span class="pname">国家自然科学基金广东联合基金项目</span><span class="pno">U22A2062</span></td>
+          <td class="c-src">国家级</td>
+          <td class="c-period">2023.01—2026.12</td>
+          <td class="c-money"></td>
+          <td class="c-role">参与</td>
+        </tr>
+        <tr>
+          <td class="c-name"><span class="pname">国家自然科学基金重点项目</span><span class="pno">61633002</span></td>
+          <td class="c-src">国家级</td>
+          <td class="c-period">2017.01—2021.12</td>
+          <td class="c-money"></td>
+          <td class="c-role">参与</td>
+        </tr>
+        <tr>
+          <td class="c-name"><span class="pname">基于金纳米簇和 MEMS 微针贴片的无痛响应性血糖调节体系研究</span><span class="pno">81871484</span></td>
+          <td class="c-src">国家级·国家自然科学基金面上项目</td>
+          <td class="c-period">2019.01—2022.12</td>
+          <td class="c-money"></td>
+          <td class="c-role">参与</td>
+        </tr>
+        <tr>
+          <td class="c-name"><span class="pname">基于增材制造的智能仿生结构设计技术</span><span class="pno">2018YFB1105100</span></td>
+          <td class="c-src">国家级·国家重点研发计划</td>
+          <td class="c-period">2018.05—2021.04</td>
+          <td class="c-money"></td>
+          <td class="c-role">参与</td>
+        </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="papers">
+  <div class="sec-head"><span class="sec-no">04</span><h2>学术论文</h2><span class="sec-en">Publications</span></div>
+  <div class="prose" style="margin-bottom:6px"><p style="font-size:13.5px;color:var(--muted)">20 篇 SCI，其中一作/通讯 11 篇、中科院一区 11 篇（含封面论文 2 篇、ESI 高被引 1 篇），被引 1038 次 / h-index 12。分区标注 * 为参考值。</p></div>
+  <ul class="papers">
+      <li class="paper">
+        <div class="paper-year">2026</div>
+        <div class="paper-body">
+          <h3>Octopus-inspired underwater gripper with rapid stiffness tuning and robot enabling upward transport</h3>
+          <div class="paper-meta"><span class="journal">Cyborg and Bionic Systems</span><span class="vol">在线发表</span><span class="dot">·</span><span class="meta-k">IF</span> 20.9<span class="dot">·</span><span class="meta-k">被引</span> 6<a class="doi" href="https://doi.org/10.34133/cbsystems.0528" target="_blank" rel="noopener">DOI</a></div>
+          <div class="badges"><span class="badge b-first">一作</span><span class="badge b-zone">一区</span></div>
+        </div>
+      </li>
+      <li class="paper">
+        <div class="paper-year">2026</div>
+        <div class="paper-body">
+          <h3>Rod-Pipe-Climbing Soft Robot With Transitioning Locomotion</h3>
+          <div class="paper-meta"><span class="journal">IEEE/ASME Transactions on Mechatronics</span><span class="vol">在线发表</span><span class="dot">·</span><span class="meta-k">IF</span> 6.3<span class="dot">·</span><span class="meta-k">被引</span> 3<a class="doi" href="https://doi.org/10.1109/tmech.2026.3688602" target="_blank" rel="noopener">DOI</a></div>
+          <div class="badges"><span class="badge b-corr">共同通讯</span><span class="badge b-zone">一区</span></div>
+        </div>
+      </li>
+      <li class="paper">
+        <div class="paper-year">2026</div>
+        <div class="paper-body">
+          <h3>Dual-modulus regulation in bioinspired shape memory polymer micropillar arrays for strong and switchable adhesion</h3>
+          <div class="paper-meta"><span class="journal">Chemical Engineering Journal</span><span class="vol">183182</span><span class="dot">·</span><span class="meta-k">IF</span> 13.2<span class="dot">·</span><a class="doi" href="https://doi.org/10.1016/j.cej.2026.183182" target="_blank" rel="noopener">DOI</a></div>
+          <div class="badges"><span class="badge b-corr">共同通讯</span><span class="badge b-zone">一区</span></div>
+        </div>
+      </li>
+      <li class="paper">
+        <div class="paper-year">2026</div>
+        <div class="paper-body">
+          <h3>EMG-Driven Telemetry and Inference System for Fish: Pose Reconstruction and Flow Sensing</h3>
+          <div class="paper-meta"><span class="journal">Advanced Intelligent Systems</span><span class="vol">e202501085</span><span class="dot">·</span><span class="meta-k">IF</span> 6.7<span class="dot">·</span><a class="doi" href="https://doi.org/10.1002/aisy.202501085" target="_blank" rel="noopener">DOI</a></div>
+          <div class="badges"><span class="badge b-plain">第五</span><span class="badge b-zone">二区*</span></div>
+        </div>
+      </li>
+      <li class="paper">
+        <div class="paper-year">2026</div>
+        <div class="paper-body">
+          <h3>An Optimization Framework for Soft Fluidic Actuators: Fully Coupled FSI Simulation with Surrogate Modeling</h3>
+          <div class="paper-meta"><span class="journal">IEEE/ASME Transactions on Mechatronics</span><span class="vol">待定</span><span class="dot">·</span><span class="meta-k">IF</span> 6.3<span class="dot">·</span></div>
+          <div class="badges"><span class="badge b-plain">第五</span><span class="badge b-zone">一区</span><span class="badge b-accept">已录用</span></div>
+        </div>
+      </li>
+      <li class="paper">
+        <div class="paper-year">2025</div>
+        <div class="paper-body">
+          <h3>Monolithic Programmable Fabric-Stacking Enables Multifunctional Soft Robots</h3>
+          <div class="paper-meta"><span class="journal">IEEE Transactions on Robotics</span><span class="vol">在线发表</span><span class="dot">·</span><span class="meta-k">IF</span> 11.1<span class="dot">·</span><span class="meta-k">被引</span> 10<a class="doi" href="https://doi.org/10.1109/tro.2025.3593118" target="_blank" rel="noopener">DOI</a></div>
+          <div class="badges"><span class="badge b-corr">共同通讯</span><span class="badge b-zone">一区</span></div>
+        </div>
+      </li>
+      <li class="paper">
+        <div class="paper-year">2025</div>
+        <div class="paper-body">
+          <h3>Beyond propulsion: muscle proprioception enables hydrodynamic sensing in fish body</h3>
+          <div class="paper-meta"><span class="journal">Proceedings of the Royal Society B: Biological Sciences</span><span class="vol">292(2057): 20250474</span><span class="dot">·</span><span class="meta-k">IF</span> 3.6<span class="dot">·</span><span class="meta-k">被引</span> 8<a class="doi" href="https://doi.org/10.1098/rspb.2025.0474" target="_blank" rel="noopener">DOI</a></div>
+          <div class="badges"><span class="badge b-plain">第四</span><span class="badge b-zone">二区*</span></div>
+        </div>
+      </li>
+      <li class="paper">
+        <div class="paper-year">2025</div>
+        <div class="paper-body">
+          <h3>Bio-to-Robot Transfer of Fish Sensorimotor Dynamics via Interpretable Model</h3>
+          <div class="paper-meta"><span class="journal">Advanced Intelligent Systems</span><span class="vol">在线发表</span><span class="dot">·</span><span class="meta-k">IF</span> 6.7<span class="dot">·</span><span class="meta-k">被引</span> 5<a class="doi" href="https://doi.org/10.1002/aisy.202501117" target="_blank" rel="noopener">DOI</a></div>
+          <div class="badges"><span class="badge b-plain">第五</span><span class="badge b-zone">二区*</span></div>
+        </div>
+      </li>
+      <li class="paper">
+        <div class="paper-year">2024</div>
+        <div class="paper-body">
+          <h3>Octopus-inspired underwater soft robotic gripper with crawling and swimming capabilities</h3>
+          <div class="paper-meta"><span class="journal">Research</span><span class="vol">7: 0456</span><span class="dot">·</span><span class="meta-k">IF</span> 12.9<span class="dot">·</span><span class="meta-k">被引</span> 100<a class="doi" href="https://doi.org/10.34133/research.0456" target="_blank" rel="noopener">DOI</a></div>
+          <div class="badges"><span class="badge b-first">一作</span><span class="badge b-zone">一区</span></div>
+        </div>
+      </li>
+      <li class="paper">
+        <div class="paper-year">2024</div>
+        <div class="paper-body">
+          <h3>Reticular origami soft robotic gripper for shape-adaptive and bistable rapid grasping</h3>
+          <div class="paper-meta"><span class="journal">Soft Robotics</span><span class="vol">11(4): 550-560</span><span class="dot">·</span><span class="meta-k">IF</span> 7.9<span class="dot">·</span><span class="meta-k">被引</span> 31<a class="doi" href="https://doi.org/10.1089/soro.2023.0051" target="_blank" rel="noopener">DOI</a></div>
+          <div class="badges"><span class="badge b-co">共同一作</span><span class="badge b-zone">一区</span><span class="badge b-cover">封面</span></div>
+        </div>
+      </li>
+      <li class="paper">
+        <div class="paper-year">2024</div>
+        <div class="paper-body">
+          <h3>Multimodal soft amphibious robots using simple plastic-sheet-reinforced thin pneumatic actuators</h3>
+          <div class="paper-meta"><span class="journal">IEEE Transactions on Robotics</span><span class="vol">40: 1874-1889</span><span class="dot">·</span><span class="meta-k">IF</span> 11.1<span class="dot">·</span><span class="meta-k">被引</span> 43<a class="doi" href="https://doi.org/10.1109/tro.2024.3360961" target="_blank" rel="noopener">DOI</a></div>
+          <div class="badges"><span class="badge b-plain">第二</span><span class="badge b-zone">一区</span></div>
+        </div>
+      </li>
+      <li class="paper">
+        <div class="paper-year">2022</div>
+        <div class="paper-body">
+          <h3>Glowing Sucker Octopus (Stauroteuthis syrtensis)-Inspired Soft Robotic Gripper for Underwater Self-Adaptive Grasping and Sensing</h3>
+          <div class="paper-meta"><span class="journal">Advanced Science</span><span class="vol">9(17): 2104382</span><span class="dot">·</span><span class="meta-k">IF</span> 17.5<span class="dot">·</span><span class="meta-k">被引</span> 192<a class="doi" href="https://doi.org/10.1002/advs.202104382" target="_blank" rel="noopener">DOI</a></div>
+          <div class="badges"><span class="badge b-first">一作</span><span class="badge b-zone">一区</span><span class="badge b-cover">封面</span><span class="badge b-esi">ESI 高被引</span></div>
+        </div>
+      </li>
+      <li class="paper">
+        <div class="paper-year">2022</div>
+        <div class="paper-body">
+          <h3>A fully 3D-printed tortoise-inspired soft robot with terrains-adaptive and amphibious landing capabilities</h3>
+          <div class="paper-meta"><span class="journal">Advanced Materials Technologies</span><span class="vol">7(12): 2200536</span><span class="dot">·</span><span class="meta-k">IF</span> 8.9<span class="dot">·</span><span class="meta-k">被引</span> 70<a class="doi" href="https://doi.org/10.1002/admt.202200536" target="_blank" rel="noopener">DOI</a></div>
+          <div class="badges"><span class="badge b-first">一作</span><span class="badge b-zone">二区</span></div>
+        </div>
+      </li>
+      <li class="paper">
+        <div class="paper-year">2021</div>
+        <div class="paper-body">
+          <h3>3D printing of bioinspired compartmentalized capsular structure for controlled drug release</h3>
+          <div class="paper-meta"><span class="journal">Journal of Zhejiang University-SCIENCE B</span><span class="vol">22(12): 1022-1033</span><span class="dot">·</span><span class="meta-k">IF</span> 5.7<span class="dot">·</span><span class="meta-k">被引</span> 30<a class="doi" href="https://doi.org/10.1631/jzus.b2100644" target="_blank" rel="noopener">DOI</a></div>
+          <div class="badges"><span class="badge b-co">共同一作</span><span class="badge b-zone">三区*</span></div>
+        </div>
+      </li>
+      <li class="paper">
+        <div class="paper-year">2021</div>
+        <div class="paper-body">
+          <h3>A dissolving and glucose-responsive insulin-releasing microneedle patch for type 1 diabetes therapy</h3>
+          <div class="paper-meta"><span class="journal">Journal of Materials Chemistry B</span><span class="vol">9(3): 648-657</span><span class="dot">·</span><span class="meta-k">IF</span> 6.2<span class="dot">·</span><span class="meta-k">被引</span> 103<a class="doi" href="https://doi.org/10.1039/d0tb02133d" target="_blank" rel="noopener">DOI</a></div>
+          <div class="badges"><span class="badge b-plain">第二</span><span class="badge b-zone">二区*</span></div>
+        </div>
+      </li>
+      <li class="paper">
+        <div class="paper-year">2020</div>
+        <div class="paper-body">
+          <h3>Assisted 3D printing of microneedle patches for minimally invasive glucose control in diabetes</h3>
+          <div class="paper-meta"><span class="journal">Materials Science and Engineering: C</span><span class="vol">117: 111299</span><span class="dot">·</span><span class="meta-k">IF</span> 8.1<span class="dot">·</span><span class="meta-k">被引</span> 200<a class="doi" href="https://doi.org/10.1016/j.msec.2020.111299" target="_blank" rel="noopener">DOI</a></div>
+          <div class="badges"><span class="badge b-first">一作</span><span class="badge b-zone">一区</span></div>
+        </div>
+      </li>
+      <li class="paper">
+        <div class="paper-year">2020</div>
+        <div class="paper-body">
+          <h3>Glucose-responsive gold nanocluster-loaded microneedle patch for type 1 diabetes therapy</h3>
+          <div class="paper-meta"><span class="journal">ACS Applied Bio Materials</span><span class="vol">3(12): 8640-8649</span><span class="dot">·</span><span class="meta-k">IF</span> 5.6<span class="dot">·</span><span class="meta-k">被引</span> 44<a class="doi" href="https://doi.org/10.1021/acsabm.0c01042" target="_blank" rel="noopener">DOI</a></div>
+          <div class="badges"><span class="badge b-plain">第三</span><span class="badge b-zone">三区*</span></div>
+        </div>
+      </li>
+      <li class="paper">
+        <div class="paper-year">2019</div>
+        <div class="paper-body">
+          <h3>A smart hydrogel system for visual detection of glucose</h3>
+          <div class="paper-meta"><span class="journal">Biosensors and Bioelectronics</span><span class="vol">142: 111547</span><span class="dot">·</span><span class="meta-k">IF</span> 11.8<span class="dot">·</span><span class="meta-k">被引</span> 95<a class="doi" href="https://doi.org/10.1016/j.bios.2019.111547" target="_blank" rel="noopener">DOI</a></div>
+          <div class="badges"><span class="badge b-first">一作</span><span class="badge b-zone">一区</span></div>
+        </div>
+      </li>
+      <li class="paper">
+        <div class="paper-year">2019</div>
+        <div class="paper-body">
+          <h3>Gold nanoclusters for controlled insulin release and glucose regulation in diabetes</h3>
+          <div class="paper-meta"><span class="journal">Nanoscale</span><span class="vol">11(13): 6471-6479</span><span class="dot">·</span><span class="meta-k">IF</span> 5.2<span class="dot">·</span><span class="meta-k">被引</span> 52<a class="doi" href="https://doi.org/10.1039/c9nr00668k" target="_blank" rel="noopener">DOI</a></div>
+          <div class="badges"><span class="badge b-plain">第二</span><span class="badge b-zone">二区*</span></div>
+        </div>
+      </li>
+      <li class="paper">
+        <div class="paper-year">2019</div>
+        <div class="paper-body">
+          <h3>High drug-loading gold nanoclusters for responsive glucose control in type 1 diabetes</h3>
+          <div class="paper-meta"><span class="journal">Journal of Nanobiotechnology</span><span class="vol">17(1): 74</span><span class="dot">·</span><span class="meta-k">IF</span> 15.0<span class="dot">·</span><span class="meta-k">被引</span> 37<a class="doi" href="https://doi.org/10.1186/s12951-019-0505-z" target="_blank" rel="noopener">DOI</a></div>
+          <div class="badges"><span class="badge b-plain">第二</span><span class="badge b-zone">一区*</span></div>
+        </div>
+      </li>
+  </ul>
+</section>
+
+<section id="patents">
+  <div class="sec-head"><span class="sec-no">05</span><h2>发明专利</h2><span class="sec-en">Patents</span></div>
+  <div class="pat-stats">
+    <div><b>18</b>项 总量</div>
+    <div><b>6</b>项 已授权</div>
+    <div><b>10</b>项 实质审查</div>
+    <div><b>7</b>项 第一发明人</div>
+  </div>
+  <table>
+    <thead><tr><th>专利名称</th><th>公开(公告)号</th><th>申请号</th><th>申请日</th><th>申请人</th><th>状态</th><th style="text-align:center">排序</th></tr></thead>
+    <tbody>
+        <tr class="prow first">
+          <td class="c-title">一种具备水陆两栖能力的仿生机器鱼及其控制方法</td>
+          <td class="c-num">CN122126420A</td>
+          <td class="c-app">CN202610440879.4</td>
+          <td class="c-date">2026.04.04</td>
+          <td class="c-org">郑州大学</td>
+          <td><span class="st st-wait">实质审查</span></td>
+          <td class="c-rank">1</td>
+        </tr>
+        <tr class="prow first">
+          <td class="c-title">一种多管径自适应的管道外壁机器人</td>
+          <td class="c-num">CN122041013A</td>
+          <td class="c-app">CN202610311662.3</td>
+          <td class="c-date">2026.03.15</td>
+          <td class="c-org">郑州大学</td>
+          <td><span class="st st-wait">实质审查</span></td>
+          <td class="c-rank">1</td>
+        </tr>
+        <tr class="prow first">
+          <td class="c-title">一种具有多抓取模式的软体机械手</td>
+          <td class="c-num">CN120095865A / B</td>
+          <td class="c-app">CN202510493616.5</td>
+          <td class="c-date">2025.04.18</td>
+          <td class="c-org">郑州大学</td>
+          <td><span class="st st-ok">已授权</span></td>
+          <td class="c-rank">1</td>
+        </tr>
+        <tr class="prow first">
+          <td class="c-title">一种刚柔耦合的感知与抓取一体式可变构无人机</td>
+          <td class="c-num">CN120270565A</td>
+          <td class="c-app">CN202510532919.3</td>
+          <td class="c-date">2025.04.25</td>
+          <td class="c-org">郑州大学</td>
+          <td><span class="st st-wait">实质审查</span></td>
+          <td class="c-rank">1</td>
+        </tr>
+        <tr class="prow first">
+          <td class="c-title">一种基于双稳态的无人机多模态栖息装置</td>
+          <td class="c-num">CN120370973A</td>
+          <td class="c-app">CN202510493592.3</td>
+          <td class="c-date">2025.04.18</td>
+          <td class="c-org">郑州大学</td>
+          <td><span class="st st-wait">实质审查</span></td>
+          <td class="c-rank">1</td>
+        </tr>
+        <tr class="prow first">
+          <td class="c-title">一种具备水陆两栖及管道运动能力的机器人</td>
+          <td class="c-num">CN121590196A</td>
+          <td class="c-app">CN202512005340.4</td>
+          <td class="c-date">2025.12.29</td>
+          <td class="c-org">郑州大学</td>
+          <td><span class="st st-wait">实质审查</span></td>
+          <td class="c-rank">1</td>
+        </tr>
+        <tr class="prow first">
+          <td class="c-title">一种可变构水陆空多栖无人机</td>
+          <td class="c-num">CN120229393A</td>
+          <td class="c-app">CN202510486307.5</td>
+          <td class="c-date">2025.04.17</td>
+          <td class="c-org">郑州大学</td>
+          <td><span class="st st-wait">实质审查</span></td>
+          <td class="c-rank">1</td>
+        </tr>
+        <tr class="prow">
+          <td class="c-title">一种基于智能体的无人机开发辅助系统</td>
+          <td class="c-num">CN121166101A</td>
+          <td class="c-app">CN202511307404.X</td>
+          <td class="c-date">2025.09.13</td>
+          <td class="c-org">郑州大学</td>
+          <td><span class="st st-wait">实质审查</span></td>
+          <td class="c-rank">7</td>
+        </tr>
+        <tr class="prow">
+          <td class="c-title">一种防水型四旋翼多轴无人机</td>
+          <td class="c-num">CN120573291A</td>
+          <td class="c-app">CN202510997955.7</td>
+          <td class="c-date">2025.07.20</td>
+          <td class="c-org">郑州大学</td>
+          <td><span class="st st-wait">实质审查</span></td>
+          <td class="c-rank">8</td>
+        </tr>
+        <tr class="prow">
+          <td class="c-title">一种无人机QGC地面站二次开发辅助管理系统</td>
+          <td class="c-num">CN121166186A</td>
+          <td class="c-app">CN202511307401.6</td>
+          <td class="c-date">2025.09.13</td>
+          <td class="c-org">郑州大学</td>
+          <td><span class="st st-wait">实质审查</span></td>
+          <td class="c-rank">6</td>
+        </tr>
+        <tr class="prow">
+          <td class="c-title">一种水下作业机器人</td>
+          <td class="c-num">CN116588292A / B</td>
+          <td class="c-app">CN202310585630.9</td>
+          <td class="c-date">2023.05.23</td>
+          <td class="c-org">北京大学</td>
+          <td><span class="st st-ok">已授权</span></td>
+          <td class="c-rank">3</td>
+        </tr>
+        <tr class="prow">
+          <td class="c-title">一种软体两栖机器人</td>
+          <td class="c-num">CN116872657A</td>
+          <td class="c-app">CN202211011656.4</td>
+          <td class="c-date">2022.08.23</td>
+          <td class="c-org">北京大学</td>
+          <td><span class="st st-wait">实质审查</span></td>
+          <td class="c-rank">2</td>
+        </tr>
+        <tr class="prow">
+          <td class="c-title">一种软体抓手及抓取机器人</td>
+          <td class="c-num">CN116872235A / B</td>
+          <td class="c-app">CN202210833330.3</td>
+          <td class="c-date">2022.07.15</td>
+          <td class="c-org">北京大学</td>
+          <td><span class="st st-ok">已授权</span></td>
+          <td class="c-rank">2</td>
+        </tr>
+        <tr class="prow">
+          <td class="c-title">一种集成化仿生软体抓手及抓取机器人</td>
+          <td class="c-num">CN116872236A</td>
+          <td class="c-app">CN202210833344.5</td>
+          <td class="c-date">2022.07.15</td>
+          <td class="c-org">北京大学</td>
+          <td><span class="st st-ok">未授权即失效</span></td>
+          <td class="c-rank">2</td>
+        </tr>
+        <tr class="prow">
+          <td class="c-title">3D打印药物缓释胶囊及其制备方法与应用</td>
+          <td class="c-num">CN111249257A / B</td>
+          <td class="c-app">CN202010230704.3</td>
+          <td class="c-date">2020.03.27</td>
+          <td class="c-org">武汉大学</td>
+          <td><span class="st st-ok">已授权</span></td>
+          <td class="c-rank">2</td>
+        </tr>
+        <tr class="prow">
+          <td class="c-title">一种3D打印微针贴片的制备方法及其应用</td>
+          <td class="c-num">CN110693855A / B</td>
+          <td class="c-app">CN201910959361.1</td>
+          <td class="c-date">2019.10.10</td>
+          <td class="c-org">武汉大学</td>
+          <td><span class="st st-ok">已授权</span></td>
+          <td class="c-rank">2</td>
+        </tr>
+        <tr class="prow">
+          <td class="c-title">一种用于可视化血糖检测的智能水凝胶及其制备方法</td>
+          <td class="c-num">CN110327056A / B</td>
+          <td class="c-app">CN201910437229.4</td>
+          <td class="c-date">2019.05.24</td>
+          <td class="c-org">武汉大学</td>
+          <td><span class="st st-ok">已授权</span></td>
+          <td class="c-rank">2</td>
+        </tr>
+        <tr class="prow">
+          <td class="c-title">一种3D打印空心微针的制作方法及其应用</td>
+          <td class="c-num">CN110435139A</td>
+          <td class="c-app">CN201910849115.0</td>
+          <td class="c-date">2019.09.09</td>
+          <td class="c-org">武汉大学</td>
+          <td><span class="st st-no">驳回</span></td>
+          <td class="c-rank">3</td>
+        </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="teaching">
+  <div class="sec-head"><span class="sec-no">06</span><h2>教学与人才培养</h2><span class="sec-en">Teaching &amp; Mentoring</span></div>
+  <div class="teach-grid">
+    <div>
+      <div class="subhead" style="margin-top:0">主讲与参讲课程 · 5 门次 / 6.5 学分 / 124 学时</div>
+      <table>
+        <thead><tr><th>学期</th><th>课程</th><th>授课对象</th><th>本人角色</th><th style="text-align:right">学时</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="c-term">2024-2025-2</td>
+          <td class="c-cname"><b>未来机器人概论</b><span class="cno">063124 · 专业必修课 · 1 学分/16 学时</span></td>
+          <td class="c-who">力学类 2024 级 1 班（未来机器人班）</td>
+          <td class="c-role2">团队授课，顺序第 4 位（马竞、卫洪涛、朱明甫、武明信、王利霞、李晓玉）</td>
+          <td class="c-hrs">4</td>
+        </tr>
+        <tr>
+          <td class="c-term">2024-2025-2</td>
+          <td class="c-cname"><b>人工智能原理与技术实验</b><span class="cno">065009 · 必修课（实验） · 1 学分/24 学时</span></td>
+          <td class="c-who">力学类 2024 级 1 班（未来机器人班）</td>
+          <td class="c-role2">团队授课（马竞、武明信、王利霞、卫洪涛）</td>
+          <td class="c-hrs">2</td>
+        </tr>
+        <tr>
+          <td class="c-term">2025-2026-1</td>
+          <td class="c-cname"><b>计算机辅助设计 A</b><span class="cno">065060 · 必修课 · 1.5 学分/36 学时</span></td>
+          <td class="c-who">工程力学 2024 级 1 班（未来机器人创新班）</td>
+          <td class="c-role2">参讲：主讲教师杨峰；本人承担第 15 周实验环节（先进微纳材料实验室【力办101】）</td>
+          <td class="c-hrs">2</td>
+        </tr>
+        <tr>
+          <td class="c-term">2025-2026-2</td>
+          <td class="c-cname"><b>未来机器人概论</b><span class="cno">063124 · 专业必修课 · 1 学分/16 学时</span></td>
+          <td class="c-who">工程力学 2025 级 1 班（未来机器人班）</td>
+          <td class="c-role2">团队授课，顺序第 1 位（武明信、马竞、王利霞、卫荣汉、李晓玉、朱明甫），承担第 1—2 周</td>
+          <td class="c-hrs">4</td>
+        </tr>
+        <tr>
+          <td class="c-term">2025-2026-2</td>
+          <td class="c-cname"><b>科幻与梦想——人工智能与课外科技创新</b><span class="cno">062051 · 核心通识课 · 2 学分/32 学时</span></td>
+          <td class="c-who">2025 级（全校通识选修，200 人）</td>
+          <td class="c-role2">团队授课（马竞、武明信、刘大全、卫洪涛、王利霞）</td>
+          <td class="c-hrs">2</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="subhead" style="margin-top:0">指导研究生 · 8 人</div>
+      <div class="stus">
+        <div class="stu">
+          <div class="stu-name">王泽宇</div>
+          <div class="stu-meta">2024 级 · 力学</div>
+          <div class="stu-id">202412252014528</div>
+          <div class="stu-work">科研（方向待补）</div>
+        </div>
+        <div class="stu">
+          <div class="stu-name">王晨</div>
+          <div class="stu-meta">2024 级 · 力学</div>
+          <div class="stu-id">202412252014539</div>
+          <div class="stu-work">科研（方向待补）</div>
+        </div>
+        <div class="stu">
+          <div class="stu-name">曾新培</div>
+          <div class="stu-meta">2024 级 · 力学</div>
+          <div class="stu-id">202412252014532</div>
+          <div class="stu-work">科研（方向待补）</div>
+        </div>
+        <div class="stu">
+          <div class="stu-name">郑润泽</div>
+          <div class="stu-meta">2025 级 · 力学</div>
+          <div class="stu-id">202512252014627</div>
+          <div class="stu-work">科研（方向待补）</div>
+        </div>
+        <div class="stu">
+          <div class="stu-name">黄犇</div>
+          <div class="stu-meta">2025 级 · 力学</div>
+          <div class="stu-id">202512252014599</div>
+          <div class="stu-work">科研（方向待补）</div>
+        </div>
+        <div class="stu">
+          <div class="stu-name">朱贺</div>
+          <div class="stu-meta">2026 级 · 安全工程</div>
+          <div class="stu-id">202622252014780</div>
+          <div class="stu-work">章鱼机器人制作（仿生软体抓取方向）</div>
+        </div>
+        <div class="stu">
+          <div class="stu-name">韩田超</div>
+          <div class="stu-meta">2026 级 · 工程力学</div>
+          <div class="stu-id">202612252014720</div>
+          <div class="stu-work">仿生水母机器人建模与装配</div>
+        </div>
+        <div class="stu">
+          <div class="stu-name">陈志原</div>
+          <div class="stu-meta">年级 / 专业待补</div>
+          <div class="stu-id">学号待补</div>
+          <div class="stu-work"></div>
+        </div>
+      </div>
+      <div class="subhead">班主任工作</div>
+      <ul class="svc" style="grid-template-columns:1fr">
+        <li style="display:block"><span style="color:var(--ink)">嵩阳学堂 班主任</span><em style="display:block;margin-top:2px">2026 —　主持嵩阳学堂专项教改，以“机器人微项目驱动”重构班主任育人模式</em></li>
+        <li style="display:block"><span style="color:var(--ink)">2025 级机器人创新班 学术班主任</span><em style="display:block;margin-top:2px">2025 —　学业规划、科研启蒙、创新项目对接</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mini-stats">
+    <div class="ms"><b>46</b><span>指导本科生获国家级竞赛奖</span></div>
+    <div class="ms"><b>20</b><span>省级竞赛奖</span></div>
+    <div class="ms"><b>10</b><span>国家级一等奖（含亚军 1 项）</span></div>
+  </div>
+
+  <div class="teach-grid" style="margin-top:34px">
+    <div>
+      <div class="subhead" style="margin-top:0">大学生创新创业训练计划 · 13 项</div>
+      <table>
+        <thead><tr><th>项目编号</th><th>项目名称</th><th>负责人</th><th>级别</th></tr></thead>
+        <tbody>
+        <tr class="key">
+          <td class="c-dcno">202610459193</td>
+          <td class="c-dcname">灵鳗随形：索驱自适应变体长机器鱼</td>
+          <td class="c-leader">李昱衡</td>
+          <td class="c-lvl">重点支持项目</td>
+        </tr>
+        <tr class="">
+          <td class="c-dcno">2025cxcy408</td>
+          <td class="c-dcname">水空跨介质无人机开发及动态抓取关键技术研究</td>
+          <td class="c-leader">韦雨辰</td>
+          <td class="c-lvl">一般项目</td>
+        </tr>
+        <tr class="">
+          <td class="c-dcno">2025cxcy409</td>
+          <td class="c-dcname">一种基于双稳态的无人机多模态栖息装置</td>
+          <td class="c-leader">吕怡纬</td>
+          <td class="c-lvl">一般项目</td>
+        </tr>
+        <tr class="">
+          <td class="c-dcno">2025cxcy417</td>
+          <td class="c-dcname">无人机跨尺度柔性抓取及水面栖息能力关键技术研究</td>
+          <td class="c-leader">黄明涛</td>
+          <td class="c-lvl">一般项目</td>
+        </tr>
+        <tr class="">
+          <td class="c-dcno">2025cxcy430</td>
+          <td class="c-dcname">基于无刷电机绳驱与 3D 打印技术的仿生机器鱼高速推进关键技术研究</td>
+          <td class="c-leader">许修照</td>
+          <td class="c-lvl">一般项目</td>
+        </tr>
+        <tr class="">
+          <td class="c-dcno">2026cxcy391</td>
+          <td class="c-dcname">水陆空跨介质可变构多模态无人机系统设计与实现</td>
+          <td class="c-leader">陈宗杰</td>
+          <td class="c-lvl">一般项目</td>
+        </tr>
+        <tr class="">
+          <td class="c-dcno">2026cxcy399</td>
+          <td class="c-dcname">刚柔耦合的栖息与抓取一体式可变构无人机</td>
+          <td class="c-leader">李凯鸿</td>
+          <td class="c-lvl">一般项目</td>
+        </tr>
+        <tr class="">
+          <td class="c-dcno">2026cxcy402</td>
+          <td class="c-dcname">多模态多场景下多驱动耦合软体抓取手性能研究</td>
+          <td class="c-leader">梁韶</td>
+          <td class="c-lvl">一般项目</td>
+        </tr>
+        <tr class="">
+          <td class="c-dcno">2026cxcy405</td>
+          <td class="c-dcname">多功能机器鱼的技术创新与应用探索</td>
+          <td class="c-leader">聂诗钊</td>
+          <td class="c-lvl">一般项目</td>
+        </tr>
+        <tr class="">
+          <td class="c-dcno">2026cxcy407</td>
+          <td class="c-dcname">面向水下作业的多模态跨介质抓取无人机研制</td>
+          <td class="c-leader">祁振帅</td>
+          <td class="c-lvl">一般项目</td>
+        </tr>
+        <tr class="">
+          <td class="c-dcno">2026cxcy422</td>
+          <td class="c-dcname">肌电与视觉融合控制的气动智能假肢系统研究</td>
+          <td class="c-leader">张济钧</td>
+          <td class="c-lvl">一般项目</td>
+        </tr>
+        <tr class="">
+          <td class="c-dcno">2026cxcy424</td>
+          <td class="c-dcname">可变径自适应水下管道检测机器人设计与研究</td>
+          <td class="c-leader">赵丰雨</td>
+          <td class="c-lvl">一般项目</td>
+        </tr>
+        <tr class="">
+          <td class="c-dcno">2026cxcy426</td>
+          <td class="c-dcname">“多态跃迁”水陆管一体化救援机器人</td>
+          <td class="c-leader">周晋阳</td>
+          <td class="c-lvl">一般项目</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="subhead" style="margin-top:0">教育教学改革项目 · 主持 1 项 / 参与 3 项</div>
+      <ul class="svc" style="grid-template-columns:1fr">
+        <li style="display:block"><span style="color:var(--ink)">嵩阳学堂专项·学工实践类（2026，主持）</span><em style="display:block;margin-top:2px">机器人微项目驱动的班主任育人模式探索与实践</em></li>
+        <li style="display:block"><span style="color:var(--ink)">“力学+未来机器人”新工科人才培养实践式教学改革（2025，第 3）</span><em style="display:block;margin-top:2px">2025BJGXM248 · 主持人 马竞</em></li>
+        <li style="display:block"><span style="color:var(--ink)">AI+ 智能化数字仿真实践教学平台（2026，第 2）</span><em style="display:block;margin-top:2px">主持人 刘艳萍</em></li>
+        <li style="display:block"><span style="color:var(--ink)">《燃烧与爆炸理论》智慧课程与案例库（2026，第 5）</span><em style="display:block;margin-top:2px">主持人 赵雪娥</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subhead" style="margin-top:44px">学科竞赛指导 · 全部 66 项（国家级 46 项、省级 20 项）</div>
+  <table class="cp-table">
+    <thead><tr><th>年份</th><th>竞赛名称</th><th>级别</th><th>获奖等级</th><th>参赛学生</th><th>本人身份</th></tr></thead>
+    <tbody>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">2026 RoboCup 机器人世界杯中国赛总决赛·“机器人+”创新专项赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g1">一等奖（亚军）</span></td>
+          <td class="c-cpstu">曾新培、周晋阳、王晨</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">2026 中国机器人大赛暨 RoboCup 机器人世界杯中国赛（中国机器人大赛赛区）</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g1">一等奖</span></td>
+          <td class="c-cpstu">曾新培、周晋阳、王晨</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">第十五届全国海洋航行器设计与制作大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g1">一等奖</span></td>
+          <td class="c-cpstu">穆岩涛、聂诗钊、邱曦冉、童显宇、李凤翔</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">第二十八届中国机器人及人工智能大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g1">一等奖</span></td>
+          <td class="c-cpstu">王世玉、刘天雨、吕怡纬</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">2026 中国机器人大赛暨 RoboCup 机器人世界杯中国赛（RoboCup 赛区）</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g1">一等奖</span></td>
+          <td class="c-cpstu">陈昱昕、晋廷飞、梁忠卫、耿逸轩、迟尚斌</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">2026 中国机器人大赛暨 RoboCup 机器人世界杯中国赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g1">一等奖</span></td>
+          <td class="c-cpstu">田骐通、邓路强、张博文</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">2026 中国机器人大赛暨 RoboCup 机器人世界杯中国赛（中国机器人大赛赛区）</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g1">一等奖</span></td>
+          <td class="c-cpstu">赵荣祥、杨启航、陈宗杰、周琦豪、石可颖</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">第二十八届中国机器人及人工智能大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">聂诗钊、杨潇、张宝中</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">第十九届先进机器人及仿真技术大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">聂诗钊、张宝中、童显宇、邱晓强</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">2026 中国机器人大赛暨 RoboCup 机器人世界杯中国赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">杨启航、陈宗杰、李晓洋</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">2026 中国机器人大赛暨 RoboCup 机器人世界杯中国赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">杨启航、陈宗杰、石可颖、周琦濠、赵荣祥</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">中国机器人大赛暨 RoboCup 机器人世界杯中国赛·专项赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">王泽宇、徐峥、何佳鑫</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">2026 中国机器人大赛暨 RoboCup 机器人世界杯中国赛（中国机器人大赛赛区）</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">赵荣祥、杨启航、陈宗杰、周琦豪、石可颖</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">中国机器人大赛暨 RoboCup 机器人世界杯中国赛·专项赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">李凯鸿、李浩宇、杨帅领、张笑宇</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">2026 睿抗机器人开发者大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">聂诗钊、冯玉豪、雷栋梁</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">第十九届先进机器人及仿真技术大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">石可颖、杨启航、赵荣祥、陈宗杰</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">中国机器人大赛暨 RoboCup 机器人世界杯中国赛·专项赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">王世玉、吕怡纬、刘天雨、马润栋、郭宇豪</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">第十九届先进机器人及仿真技术大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">王泽宇、徐峥、何佳鑫、何佳衡</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">中国机器人大赛暨 RoboCup 机器人世界杯中国赛（RoboCup 赛区）</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">许修照、王琦斌、樊雪川、孟庆贺、杨若琦</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">中国机器人大赛暨 RoboCup 机器人世界杯中国赛（中国机器人大赛赛区）专项赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">许修照、王琦斌</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">第三届全国大学生职业规划大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g3">铜奖</span></td>
+          <td class="c-cpstu">韦雨辰</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2026</td>
+          <td class="c-cpname">第二十八届中国机器人及人工智能大赛（省赛）</td>
+          <td><span class="lv prov">省部级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">李梦露、祁振帅、韦雨辰</td>
+          <td class="c-cpwho">指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">中国机器人及人工智能大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g1">一等奖</span></td>
+          <td class="c-cpstu">李凯鸿、刘博宇、王泽杭</td>
+          <td class="c-cpwho">第一指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">中国机器人及人工智能大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g1">一等奖</span></td>
+          <td class="c-cpstu">吕怡纬、武锦琦、王浡铖</td>
+          <td class="c-cpwho">第一指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">2025 中国机器人大赛暨 RoboCup 机器人世界杯中国赛·专项赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g1">一等奖</span></td>
+          <td class="c-cpstu">吕怡纬、胡颢哲、徐浩然</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">中国机器人及人工智能大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">韦雨辰、刘博宇、许朝阳</td>
+          <td class="c-cpwho">第一指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">中国机器人及人工智能大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">许修照、王琦斌、王航</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">2025 中国机器人大赛暨 RoboCup 机器人世界杯中国赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">吕怡纬、胡颢哲、徐浩然</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">蓝桥杯全国软件和信息技术专业人才大赛数字科技创新赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">李凯鸿、黄钊霏、王泽杭</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">国际先进机器人及仿真技术大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">胡颢哲、吕怡纬、周文龙、高凡淇</td>
+          <td class="c-cpwho">第一指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">国际先进机器人及仿真技术大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">吕怡纬、胡颢哲、韦雨辰、张博文</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">国际先进机器人及仿真技术大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">孙昊天、杨启航、李晓洋</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">国际先进机器人及仿真技术大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">韦雨辰、刘博宇、祁振帅、王彩瑜</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">中国机器人及人工智能大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">梁韶、高凡淇、何洋</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">中国机器人及人工智能大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">孙昊天、杨启航、李晓洋</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">第十三届全国大学生数字媒体科技作品及创意竞赛全国总决赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">吕怡纬</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">2025 年第十九届 iCAN 大学生创新创业大赛创新赛道</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">韦雨辰、刘博宇、周颜凌霜、王浡铖、武锦琦</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">蓝桥杯全国软件和信息技术专业人才大赛数字科技创新赛（命题）</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">韦雨辰、王泽杭、刘博宇</td>
+          <td class="c-cpwho">第一指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">国际先进机器人及仿真技术大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">赵一帆、张上炫、张傲硕、于成伟</td>
+          <td class="c-cpwho">第一指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">国际先进机器人及仿真技术大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">聂诗钊、王加苏、王子聪、杨潇</td>
+          <td class="c-cpwho">第一指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">国际先进机器人及仿真技术大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">李凯鸿、刘博宇、李浩宇、王浡铖</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">第十八届先进机器人及仿真技术大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">聂诗钊、穆岩涛、王加苏、杨峻岩</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">国际先进机器人及仿真技术大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">许修照、王琦斌、王爽爽、李坤宇</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">蓝桥杯全国软件和信息技术专业人才大赛数字科技创新赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g9">优秀奖</span></td>
+          <td class="c-cpstu">吕怡纬、许朝阳、王彩瑜</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">中国机器人及人工智能大赛（省赛）</td>
+          <td><span class="lv prov">省部级</span></td>
+          <td><span class="gd g1">一等奖</span></td>
+          <td class="c-cpstu">梁韶、高凡淇、何洋</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">中国机器人及人工智能大赛（省赛）</td>
+          <td><span class="lv prov">省部级</span></td>
+          <td><span class="gd g1">一等奖</span></td>
+          <td class="c-cpstu">韦雨辰、刘博宇、许朝阳</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">中国机器人及人工智能大赛（省赛）</td>
+          <td><span class="lv prov">省部级</span></td>
+          <td><span class="gd g1">一等奖</span></td>
+          <td class="c-cpstu">吕怡纬、武锦琦、王浡铖</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">中国机器人及人工智能大赛（省赛）</td>
+          <td><span class="lv prov">省部级</span></td>
+          <td><span class="gd g1">一等奖</span></td>
+          <td class="c-cpstu">孙昊天、杨启航、李晓洋</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">国际先进机器人及仿真技术大赛（省赛）</td>
+          <td><span class="lv prov">省部级</span></td>
+          <td><span class="gd g1">一等奖</span></td>
+          <td class="c-cpstu">吕怡纬、胡颢哲、韦雨辰、张博文</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">国际先进机器人及仿真技术大赛（省赛）</td>
+          <td><span class="lv prov">省部级</span></td>
+          <td><span class="gd g1">一等奖</span></td>
+          <td class="c-cpstu">孙昊天、杨启航、李晓洋</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">国际先进机器人及仿真技术大赛（省赛）</td>
+          <td><span class="lv prov">省部级</span></td>
+          <td><span class="gd g1">一等奖</span></td>
+          <td class="c-cpstu">胡颢哲、吕怡纬、周文龙、高凡淇</td>
+          <td class="c-cpwho">第一指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">2025 年第十九届 iCAN 大学生创新创业大赛创新赛道河南省选拔赛</td>
+          <td><span class="lv prov">省部级</span></td>
+          <td><span class="gd g1">一等奖</span></td>
+          <td class="c-cpstu">韦雨辰、刘博宇、周颜凌霜、王浡铖、武锦琦</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">中国机器人及人工智能大赛（省赛）</td>
+          <td><span class="lv prov">省部级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">李凯鸿、刘博宇、王泽杭</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">中国机器人及人工智能大赛（省赛）</td>
+          <td><span class="lv prov">省部级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">许修照、王琦斌、王航</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">国际先进机器人及仿真技术大赛（省赛）</td>
+          <td><span class="lv prov">省部级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">聂诗钊、王加苏、王子聪、杨潇</td>
+          <td class="c-cpwho">第一指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">国际先进机器人及仿真技术大赛（省赛）</td>
+          <td><span class="lv prov">省部级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">许修照、王琦斌、王爽爽、李坤宇</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">2025 年中国国际大学生创新大赛河南赛区选拔赛</td>
+          <td><span class="lv prov">省部级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">韦雨辰等 15 人</td>
+          <td class="c-cpwho">第一指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">2025 iCAN 大赛未来机器人创业挑战赛半决赛</td>
+          <td><span class="lv prov">省部级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">韦雨辰、刘博宇、周颜凌霜、王浡铖、武锦琦</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">第十八届先进机器人及仿真技术大赛（省赛）</td>
+          <td><span class="lv prov">省部级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">聂诗钊、穆岩涛、王加苏、杨峻岩</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">中国机器人及人工智能大赛（省赛）</td>
+          <td><span class="lv prov">省部级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">聂诗钊、王加苏、王子聪</td>
+          <td class="c-cpwho">第一指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">2025 中国高校计算机大赛</td>
+          <td><span class="lv prov">省部级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">聂诗钊、杨潇、杨峻岩</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2025</td>
+          <td class="c-cpname">国际先进机器人及仿真技术大赛（省赛）</td>
+          <td><span class="lv prov">省部级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">赵一帆、张上炫、张傲硕、于成伟</td>
+          <td class="c-cpwho">第一指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2024</td>
+          <td class="c-cpname">第十八届 iCAN 大学生创新创业大赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">吕怡纬、姚睿鹏、张上炫、巢丰敏、李若克</td>
+          <td class="c-cpwho">第二指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2024</td>
+          <td class="c-cpname">中国高校计算机大赛——人工智能创意赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g2">二等奖</span></td>
+          <td class="c-cpstu">吕怡纬、洪炎、穆岩涛</td>
+          <td class="c-cpwho">第一指导教师 · 唯一</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2024</td>
+          <td class="c-cpname">全国大学生数字媒体科技作品及创意竞赛</td>
+          <td><span class="lv nat">国家级</span></td>
+          <td><span class="gd g3">三等奖</span></td>
+          <td class="c-cpstu">吕怡纬、姚睿鹏、张上炫、巢丰敏、李若克</td>
+          <td class="c-cpwho">第二指导教师</td>
+        </tr>
+        <tr>
+          <td class="c-cyr">2024</td>
+          <td class="c-cpname">第十八届 iCAN 大学生创新创业大赛（省赛）</td>
+          <td><span class="lv prov">省级</span></td>
+          <td><span class="gd g1">一等奖</span></td>
+          <td class="c-cpstu">吕怡纬、姚睿鹏、张上炫、巢丰敏、李若克</td>
+          <td class="c-cpwho">第二指导教师</td>
+        </tr>
+    </tbody>
+  </table>
+  <p class="ftnote">说明：同一赛事同一批学生的国家级赛与省级赛分开计；“唯一”指本人为该队唯一第一指导教师。2026 年部分记录依据赛事通知整理，证书尚未逐张核对。</p>
+</section>
+
+<section id="honors">
+  <div class="sec-head"><span class="sec-no">07</span><h2>荣誉奖励</h2><span class="sec-en">Honors &amp; Awards</span></div>
+  <ul class="aw-list">
+        <li><span class="aw-year">2023</span><span class="aw-name">中国国际大学生创新大赛（2023）金奖</span><span class="aw-org">教育部</span><span class="aw-lvl">国家级</span></li>
+        <li><span class="aw-year">2022.12</span><span class="aw-name">北京大学国家奖学金</span><span class="aw-org">教育部 / 北京大学</span><span class="aw-lvl">国家级</span></li>
+        <li><span class="aw-year">2026.06</span><span class="aw-name">河南省事业单位定期奖励“个人嘉奖”</span><span class="aw-org">河南省</span><span class="aw-lvl">省级</span></li>
+        <li><span class="aw-year">2025</span><span class="aw-name">郑州大学创新创业优秀指导老师</span><span class="aw-org">郑州大学</span><span class="aw-lvl">校级</span></li>
+        <li><span class="aw-year">2022.09</span><span class="aw-name">北京大学校长奖学金</span><span class="aw-org">北京大学</span><span class="aw-lvl">校级</span></li>
+        <li><span class="aw-year">2019.12</span><span class="aw-name">武汉大学 IYSS 跨学科交叉论坛 口头报告一等奖</span><span class="aw-org">武汉大学</span><span class="aw-lvl">校级（论坛级）</span></li>
+        <li><span class="aw-year">—</span><span class="aw-name">郑州大学“三育人”优秀个人</span><span class="aw-org">郑州大学</span><span class="aw-lvl">校级</span></li>
+        <li><span class="aw-year">—</span><span class="aw-name">北京大学“三好学生标兵”</span><span class="aw-org">北京大学</span><span class="aw-lvl">校级</span></li>
+        <li><span class="aw-year">—</span><span class="aw-name">武汉大学学术创新二等奖</span><span class="aw-org">武汉大学</span><span class="aw-lvl">校级</span></li>
+        <li><span class="aw-year">2023.04</span><span class="aw-name">北京大学工学院“学术十杰”</span><span class="aw-org">北京大学工学院</span><span class="aw-lvl">院级</span></li>
+        <li><span class="aw-year">2025</span><span class="aw-name">Best Paper Award 2024</span><span class="aw-org">Research（Science Partner Journal）</span><span class="aw-lvl">国际学术奖</span></li>
+        <li><span class="aw-year">2023.03</span><span class="aw-name">Wiley 中国开放科学高贡献作者奖</span><span class="aw-org">Wiley</span><span class="aw-lvl">国际学术奖</span></li>
+        <li><span class="aw-year">2022</span><span class="aw-name">国际仿生创新大赛一等奖 International Bionic Innovation Competition 2022</span><span class="aw-org">International Society of Bionic Engineering</span><span class="aw-lvl">国际学术奖（一等奖）</span></li>
+        <li><span class="aw-year">2025</span><span class="aw-name">第二十七届中国机器人及人工智能大赛优秀指导教师</span><span class="aw-org">中国机器人及人工智能大赛组委会</span><span class="aw-lvl">学会/协会级</span></li>
+        <li><span class="aw-year">2026.08</span><span class="aw-name">第七届机器人学术年会最佳海报提名奖</span><span class="aw-org">第七届机器人学术年会</span><span class="aw-lvl">会议级</span></li>
+  </ul>
+</section>
+
+<section id="service">
+  <div class="sec-head"><span class="sec-no">08</span><h2>平台支撑与学术服务</h2><span class="sec-en">Platform &amp; Service</span></div>
+  <div class="svc">
+    <div>
+      <h4>依托平台</h4>
+      <ul>
+        <li><span>微纳成型技术国家级国际联合研究中心</span><em>科技部</em></li>
+        <li><span>河南省微成型技术重点实验室</span><em>省科技厅</em></li>
+        <li><span>河南省人形机器人技术创新中心</span><em>豫科〔2026〕10 号</em></li>
+      </ul>
+    </div>
+    <div>
+      <h4>学术兼职</h4>
+      <ul>
+        <li><span>中国仿真学会 机器人仿真专业委员会 委员</span><em>在任</em></li>
+        <li><span><i>Advanced Bionics</i> 青年编委</span><em>在任</em></li>
+        <li><span><i>Bio-inspired Intelligence</i> 青年编委</span><em>在任</em></li>
+        <li><span>《组合机床与自动化加工技术》青年编委</span><em>在任</em></li>
+        <li><span>中国图象图形学学会 具身智能与机器人专委会 委员</span><em>申报中</em></li>
+      </ul>
+    </div>
+    <div>
+      <h4>著作</h4>
+      <ul>
+        <li><span><i>Micro/nano-scale materials and techniques for investigating neuron-cancer interaction</i><br><em style="display:block;margin-top:4px;font-size:11.5px">IOS Press, Biomedical and Health Research Vol.79: Stem Cells and Regenerative Medicine, pp.122—130</em></span><em>参编</em></li>
+      </ul>
+    </div>
+    <div>
+      <h4>学术会议</h4>
+      <ul>
+        <li><span>第七届全国海洋技术大会 · 水下抓取技术专题报告</span><em>2025.05 舟山</em></li>
+        <li><span>机思广议—十二校联合机械工程研究生学术论坛 · 主会场口头报告</span><em>2021.05</em></li>
+        <li><span>第十四届跨学科青年学者论坛 · 口头报告一等奖</span><em>2019.12</em></li>
+        <li><span>中国生物材料大会 · 墙报</span><em>2019.08 大连</em></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="sec-head"><span class="sec-no">09</span><h2>联系方式</h2><span class="sec-en">Contact</span></div>
+  <div class="contact-box">
+    <div class="cf"><span>Email</span><a href="mailto:mingxinwu@zzu.edu.cn">mingxinwu@zzu.edu.cn</a></div>
+    <div class="cf"><span>Address</span><div>河南省郑州市高新区科学大道 100 号<br>郑州大学 力学与安全工程学院（450001）</div></div>
+    <div class="cf"><span>Google Scholar</span><a href="https://scholar.google.com/citations?user=LLUHaXIAAA" target="_blank" rel="noopener">scholar.google.com/citations?user=LLUHaXIAAA</a></div>
+    <div class="cf"><span>ORCID</span><a href="https://orcid.org/0000-0001-9066-5118" target="_blank" rel="noopener">0000-0001-9066-5118</a></div>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 武明信 · 郑州大学力学与安全工程学院</div>
+  <div>更新于 2026 年 11 月　·　数据来自个人学术档案库</div>
+</footer>
+</main>
+
+<button class="top" id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var saved=localStorage.getItem('mxw-theme');
+  if(saved) root.setAttribute('data-theme',saved);
+  document.getElementById('themeBtn').addEventListener('click',function(){
+    var t=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    root.setAttribute('data-theme',t); localStorage.setItem('mxw-theme',t);
+  });
+  document.getElementById('printBtn').addEventListener('click',function(){window.print();});
+  var top=document.getElementById('toTop');
+  top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+  var links=[].slice.call(document.querySelectorAll('.nav-links a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+  function onScroll(){
+    var y=window.scrollY+120, cur=-1;
+    secs.forEach(function(s,i){ if(s && s.offsetTop<=y) cur=i; });
+    links.forEach(function(a,i){ a.classList.toggle('on', i===cur); });
+    top.classList.toggle('show', window.scrollY>600);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+})();
+</script>
+</body>
+</html>
